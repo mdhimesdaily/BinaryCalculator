@@ -28,7 +28,7 @@ public class Controller {
 
     public Integer plusclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         System.out.println(entry1);
         operatorClicked = "+";
         field.clear();
@@ -37,7 +37,7 @@ public class Controller {
 
     public Integer minusclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "-";
         field.clear();
 
@@ -46,7 +46,7 @@ public class Controller {
 
     public Integer multclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "x";
         field.clear();
 
@@ -55,7 +55,7 @@ public class Controller {
 
     public Integer divclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "/";
         field.clear();
 
@@ -64,7 +64,7 @@ public class Controller {
 
     public Integer sqclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "sq";
         field.clear();
 
@@ -73,7 +73,7 @@ public class Controller {
 
     public Integer sqrtclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "sqrt";
         field.clear();
 
@@ -85,34 +85,34 @@ public class Controller {
         Operator operation = new Operator();
         Convert converter = new Convert();
         if(operatorClicked.equals("+")){
-            Integer result = operation.Addition(Integer.parseInt(entry1), Integer.parseInt(entry2));
-            result = converter.ConverttoBinary(result);
+            Integer result = operation.addition(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            result = converter.convertToBinary(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("-")){
-            Integer result = operation.Subtraction(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.subtraction(Integer.parseInt(entry1), Integer.parseInt(entry2));
             System.out.println(entry1);
             System.out.println(entry2);
-            result = converter.ConverttoBinary(result);
+            result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("x")){
-            Integer result = operation.Multiplication(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.multiplication(Integer.parseInt(entry1), Integer.parseInt(entry2));
             System.out.println(entry1);
             System.out.println(entry2);
-            result = converter.ConverttoBinary(result);
+            result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("/")){
-            Integer result = operation.Division(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.division(Integer.parseInt(entry1), Integer.parseInt(entry2));
             System.out.println(entry1);
             System.out.println(entry2);
-            result = converter.ConverttoBinary(result);
+            result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
@@ -121,7 +121,7 @@ public class Controller {
             Integer result = operation.Square(Integer.parseInt(entry2));
             System.out.println(entry1);
             System.out.println(entry2);
-            result = converter.ConverttoBinary(result);
+            result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
@@ -130,7 +130,7 @@ public class Controller {
             Integer result = operation.SquareRoot(Integer.parseInt(entry2));
             System.out.println(entry1);
             System.out.println(entry2);
-            result = converter.ConverttoBinary(result);
+            result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
