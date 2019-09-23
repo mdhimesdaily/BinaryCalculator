@@ -56,17 +56,23 @@ public class Controller {
     }
 
     public void sqclick(){
+        Operator operation = new Operator();
         Convert converter = new Convert();
         entry1= converter.convertToDecimal(field.getText());
-        operatorClicked = "sq";
-        field.clear();
+        Integer result = operation.square(entry1);
+        result = converter.convertToBinary(result);
+        System.out.println(result);
+        field.setText(String.valueOf(result));
     }
 
     public void sqrtclick(){
+        Operator operation = new Operator();
         Convert converter = new Convert();
         entry1= converter.convertToDecimal(field.getText());
-        operatorClicked = "sqrt";
-        field.clear();
+        Integer result = operation.squareRoot(entry1);
+        result = converter.convertToBinary(result);
+        System.out.println(result);
+        field.setText(String.valueOf(result));
     }
 
     public void equalsclick(){
@@ -97,20 +103,6 @@ public class Controller {
 
         else if(operatorClicked.equals("/")){
             Integer result = operation.division(entry1, entry2);
-            result = converter.convertToBinary(result);
-            System.out.println(result);
-            field.setText(String.valueOf(result));
-        }
-
-        else if(operatorClicked.equals("sq")){
-            Integer result = operation.square(entry2);
-            result = converter.convertToBinary(result);
-            System.out.println(result);
-            field.setText(String.valueOf(result));
-        }
-
-        else if(operatorClicked.equals("sqrt")){
-            Integer result = operation.squareRoot(entry2);
             result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
