@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 public class Controller {
 
         private Object operatorClicked;
-        private String entry1;
+        private Integer entry1;
         @FXML private TextField field;
 
     void setMain(Main main){
@@ -28,7 +28,7 @@ public class Controller {
 
     public void plusclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
+        entry1= converter.convertToDecimal(field.getText());
         System.out.println(entry1);
         operatorClicked = "+";
         field.clear();
@@ -36,35 +36,35 @@ public class Controller {
 
     public void minusclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
+        entry1= converter.convertToDecimal(field.getText());
         operatorClicked = "-";
         field.clear();
     }
 
     public void multclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
+        entry1= converter.convertToDecimal(field.getText());
         operatorClicked = "x";
         field.clear();
     }
 
     public void divclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
+        entry1= converter.convertToDecimal(field.getText());
         operatorClicked = "/";
         field.clear();
     }
 
     public void sqclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
+        entry1= converter.convertToDecimal(field.getText());
         operatorClicked = "sq";
         field.clear();
     }
 
     public void sqrtclick(){
         Convert converter = new Convert();
-        entry1= String.valueOf(converter.convertToDecimal(field.getText()));
+        entry1= converter.convertToDecimal(field.getText());
         operatorClicked = "sqrt";
         field.clear();
     }
@@ -75,57 +75,46 @@ public class Controller {
         int entry2 =  converter.convertToDecimal(field.getText());
         System.out.println(entry2);
         if(operatorClicked.equals("+")){
-            Integer result = operation.addition(Integer.parseInt(entry1), entry2);
+            Integer result = operation.addition(entry1, entry2);
             result = converter.convertToBinary(result);
+            System.out.println(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("-")){
-            Integer result = operation.subtraction(Integer.parseInt(entry1), entry2);
-            System.out.println(entry1);
-            System.out.println(entry2);
+            Integer result = operation.subtraction(entry1, entry2);
             result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("x")){
-            Integer result = operation.multiplication(Integer.parseInt(entry1), entry2);
-            System.out.println(entry1);
-            System.out.println(entry2);
+            Integer result = operation.multiplication(entry1, entry2);
             result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("/")){
-            Integer result = operation.division(Integer.parseInt(entry1), entry2);
-            System.out.println(entry1);
-            System.out.println(entry2);
+            Integer result = operation.division(entry1, entry2);
             result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
-/*
+
         else if(operatorClicked.equals("sq")){
-            Integer result = operation.Square(entry2);
-            System.out.println(entry1);
-            System.out.println(entry2);
+            Integer result = operation.square(entry2);
             result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("sqrt")){
-            Integer result = operation.SquareRoot(entry2);
-            System.out.println(entry1);
-            System.out.println(entry2);
+            Integer result = operation.squareRoot(entry2);
             result = converter.convertToBinary(result);
             System.out.println(result);
             field.setText(String.valueOf(result));
         }
-
-        */
 
     }
 
