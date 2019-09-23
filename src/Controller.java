@@ -81,17 +81,18 @@ public class Controller {
     }
 
     public void equalsclick(){
-        String entry2 =  field.getText();
         Operator operation = new Operator();
         Convert converter = new Convert();
+        int entry2 =  converter.convertToDecimal(field.getText());
+
         if(operatorClicked.equals("+")){
-            Integer result = operation.addition(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.addition(Integer.parseInt(entry1), entry2);
             result = converter.convertToBinary(result);
             field.setText(String.valueOf(result));
         }
 
         else if(operatorClicked.equals("-")){
-            Integer result = operation.subtraction(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.subtraction(Integer.parseInt(entry1), entry2);
             System.out.println(entry1);
             System.out.println(entry2);
             result = converter.convertToBinary(result);
@@ -100,7 +101,7 @@ public class Controller {
         }
 
         else if(operatorClicked.equals("x")){
-            Integer result = operation.multiplication(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.multiplication(Integer.parseInt(entry1), entry2);
             System.out.println(entry1);
             System.out.println(entry2);
             result = converter.convertToBinary(result);
@@ -109,7 +110,7 @@ public class Controller {
         }
 
         else if(operatorClicked.equals("/")){
-            Integer result = operation.division(Integer.parseInt(entry1), Integer.parseInt(entry2));
+            Integer result = operation.division(Integer.parseInt(entry1), entry2);
             System.out.println(entry1);
             System.out.println(entry2);
             result = converter.convertToBinary(result);
@@ -118,7 +119,7 @@ public class Controller {
         }
 /*
         else if(operatorClicked.equals("sq")){
-            Integer result = operation.Square(Integer.parseInt(entry2));
+            Integer result = operation.Square(entry2);
             System.out.println(entry1);
             System.out.println(entry2);
             result = converter.convertToBinary(result);
@@ -127,7 +128,7 @@ public class Controller {
         }
 
         else if(operatorClicked.equals("sqrt")){
-            Integer result = operation.SquareRoot(Integer.parseInt(entry2));
+            Integer result = operation.SquareRoot(entry2);
             System.out.println(entry1);
             System.out.println(entry2);
             result = converter.convertToBinary(result);
