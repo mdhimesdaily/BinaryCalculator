@@ -26,65 +26,54 @@ public class Controller {
         }
     }
 
-    public Integer plusclick(){
+    public void plusclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         System.out.println(entry1);
         operatorClicked = "+";
         field.clear();
-        return Integer.parseInt(entry1);
     }
 
-    public Integer minusclick(){
+    public void minusclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "-";
         field.clear();
-
-        return Integer.parseInt(entry1);
     }
 
-    public Integer multclick(){
+    public void multclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "x";
         field.clear();
-
-        return Integer.parseInt(entry1);
     }
 
-    public Integer divclick(){
+    public void divclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "/";
         field.clear();
-
-        return Integer.parseInt(entry1);
     }
 
-    public Integer sqclick(){
+    public void sqclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "sq";
         field.clear();
-
-        return Integer.parseInt(entry1);
     }
 
-    public Integer sqrtclick(){
+    public void sqrtclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.convertToDecimal(field.getText()));
         operatorClicked = "sqrt";
         field.clear();
-
-        return Integer.parseInt(entry1);
     }
 
     public void equalsclick(){
         Operator operation = new Operator();
         Convert converter = new Convert();
         int entry2 =  converter.convertToDecimal(field.getText());
-
+        System.out.println(entry2);
         if(operatorClicked.equals("+")){
             Integer result = operation.addition(Integer.parseInt(entry1), entry2);
             result = converter.convertToBinary(result);
