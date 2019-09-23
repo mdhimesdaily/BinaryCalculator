@@ -12,17 +12,17 @@ public class Controller {
     void setMain(Main main){
     }
 
-        public void zeroclick(){
-            entry1= field.getText();
-            if(entry1.length() < 5) {
-                field.setText(entry1 + '0');
-            }
+    public void zeroclick(){
+        String temp = field.getText();
+        if(temp.length() < 5) {
+            field.setText(temp + '0');
         }
+    }
 
     public void oneclick() {
-        entry1 = field.getText();
-        if (entry1.length() < 5) {
-            field.setText(entry1 + '1');
+        String temp = field.getText();
+        if(temp.length() < 5) {
+            field.setText(temp + '1');
         }
     }
 
