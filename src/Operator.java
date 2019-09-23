@@ -2,17 +2,17 @@ public class Operator {
 
     //This class handles all mathmatical operations that occur
 
-    Integer Addition(int first_number, int second_number) {
+    int addition(int first_number, int second_number) {
 
         return first_number + second_number;
     }
 
-    Integer Subtraction(int first_number, int second_number) {
+    int subtraction(int first_number, int second_number) {
 
         return first_number - second_number;
     }
 
-    Integer Division(int first_number, int second_number) {
+    int division(int first_number, int second_number) {
 
         if(first_number < second_number) {
             return 0;
@@ -21,18 +21,17 @@ public class Operator {
         return first_number / second_number;
     }
 
-    Integer Multiplication(int first_number, int second_number) {
+    int multiplication(int first_number, int second_number) {
 
         return first_number * second_number;
     }
 
-    double SquareRoot(int first_number){
-        return java.lang.Math.sqrt(first_number);
+    double squareRoot(int first_number){
+        return Math.sqrt(first_number);
     }
 
-    double Square(int first_number){
+    double square(int first_number){
         return first_number * first_number;
     }
-
 
 }

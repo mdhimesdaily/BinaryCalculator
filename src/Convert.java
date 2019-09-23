@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Convert {
 
-    Integer ConverttoDecimal(){
+    int convertToDecimal(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a binary number");
         String binaryString=scanner.nextLine();
@@ -11,10 +11,10 @@ class Convert {
         return decimal;
     }
 
-    Integer ConverttoBinary(){
+    int convertToBinary(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a decimal number");
-        Integer decimalNumber = scanner.nextInt();
+        int decimalNumber = scanner.nextInt();
         int binary= Integer.parseInt(Integer.toBinaryString(decimalNumber));
         System.out.println(binary);
         return binary;
