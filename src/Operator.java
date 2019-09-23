@@ -16,6 +16,10 @@ public class Operator {
 
         if(first_number < second_number) {
             return 0;
+
+        } else if(second_number == 0) {
+            return 255;
+
         }
 
         return first_number / second_number;
