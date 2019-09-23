@@ -22,7 +22,7 @@ public class Operator {
 
         }
 
-        return first_number / second_number;
+        return StrictMath.round(first_number / second_number);
     }
 
     int multiplication(int first_number, int second_number) {
