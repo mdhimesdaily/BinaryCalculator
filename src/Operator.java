@@ -1,4 +1,4 @@
-public class Operator {
+class Operator {
 
     //This class handles all mathematical operations that occur
 

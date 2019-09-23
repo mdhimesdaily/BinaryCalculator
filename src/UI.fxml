@@ -7,9 +7,9 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #d9faff;">
+      <AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #d9faff; -fx-border-color: black;">
          <children>
-            <TextField fx:id="field" alignment="CENTER_RIGHT" editable="false" layoutX="28.0" layoutY="51.0" prefHeight="60.0" prefWidth="343.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+            <TextField fx:id="field" alignment="CENTER_RIGHT" editable="false" layoutX="28.0" layoutY="51.0" prefHeight="60.0" prefWidth="343.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

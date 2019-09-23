@@ -1,6 +1,4 @@
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
@@ -9,7 +7,7 @@ public class Controller {
         private Integer entry1;
         @FXML private TextField field;
 
-    void setMain(Main main){
+    void setMain(){
     }
 
     public void zeroclick(){
@@ -37,105 +35,117 @@ public class Controller {
     }
 
     public void plusclick(){
-        Convert converter = new Convert();
-        entry1= converter.convertToDecimal(field.getText());
-        System.out.println(entry1);
-        operatorClicked = "+";
-        field.clear();
+        if(!field.getText().isEmpty()) {
+            Convert converter = new Convert();
+            entry1 = converter.convertToDecimal(field.getText());
+            System.out.println(entry1);
+            operatorClicked = "+";
+            field.clear();
+        }
     }
 
     public void minusclick(){
-        Convert converter = new Convert();
-        entry1= converter.convertToDecimal(field.getText());
-        operatorClicked = "-";
-        field.clear();
+        if(!field.getText().isEmpty()) {
+            Convert converter = new Convert();
+            entry1 = converter.convertToDecimal(field.getText());
+            operatorClicked = "-";
+            field.clear();
+        }
     }
 
     public void multclick(){
-        Convert converter = new Convert();
-        entry1= converter.convertToDecimal(field.getText());
-        operatorClicked = "x";
-        field.clear();
+        if(!field.getText().isEmpty()) {
+            Convert converter = new Convert();
+            entry1 = converter.convertToDecimal(field.getText());
+            operatorClicked = "x";
+            field.clear();
+        }
     }
 
     public void divclick(){
-        Convert converter = new Convert();
-        entry1= converter.convertToDecimal(field.getText());
-        operatorClicked = "/";
-        field.clear();
+        if(!field.getText().isEmpty()) {
+            Convert converter = new Convert();
+            entry1 = converter.convertToDecimal(field.getText());
+            operatorClicked = "/";
+            field.clear();
+        }
     }
 
     public void sqclick(){
-        Operator operation = new Operator();
-        Convert converter = new Convert();
-        entry1= converter.convertToDecimal(field.getText());
-        Integer result = operation.square(entry1);
-        result = converter.convertToBinary(result);
-        System.out.println(result);
-        field.setText(String.valueOf(result));
+        if(!field.getText().isEmpty()) {
+            Operator operation = new Operator();
+            Convert converter = new Convert();
+            entry1 = converter.convertToDecimal(field.getText());
+            Integer result = operation.square(entry1);
+            result = converter.convertToBinary(result);
+            System.out.println(result);
+            field.setText(String.valueOf(result));
+        }
     }
 
     public void sqrtclick(){
-        Operator operation = new Operator();
-        Convert converter = new Convert();
-        entry1= converter.convertToDecimal(field.getText());
-        Integer result = operation.squareRoot(entry1);
-        result = converter.convertToBinary(result);
-        System.out.println(result);
-        field.setText(String.valueOf(result));
+        if(!field.getText().isEmpty()) {
+            Operator operation = new Operator();
+            Convert converter = new Convert();
+            entry1 = converter.convertToDecimal(field.getText());
+            Integer result = operation.squareRoot(entry1);
+            result = converter.convertToBinary(result);
+            System.out.println(result);
+            field.setText(String.valueOf(result));
+        }
     }
 
     public void equalsclick(){
-        Operator operation = new Operator();
-        Convert converter = new Convert();
-        int entry2 =  converter.convertToDecimal(field.getText());
-        System.out.println(entry2);
-        if(operatorClicked.equals("+")){
-            Integer result = operation.addition(entry1, entry2);
-            result = converter.convertToBinary(result);
-            System.out.println(result);
-            field.setText(String.valueOf(result));
-        }
-
-        else if(operatorClicked.equals("-")){
-
-            if(entry1 > entry2) {
-
-                Integer result = operation.subtraction(entry1, entry2);
+        if(entry1 != null) {
+            Operator operation = new Operator();
+            Convert converter = new Convert();
+            int entry2 = 0;
+            if(!field.getText().isEmpty()){
+                entry2 = converter.convertToDecimal(field.getText());
+            }
+            System.out.println(entry2);
+            if (operatorClicked.equals("+")) {
+                Integer result = operation.addition(entry1, entry2);
                 result = converter.convertToBinary(result);
                 System.out.println(result);
                 field.setText(String.valueOf(result));
+            } else if (operatorClicked.equals("-")) {
 
-            } else {
+                if (entry1 > entry2) {
 
-                field.setText("ERROR: Negative Number");
+                    Integer result = operation.subtraction(entry1, entry2);
+                    result = converter.convertToBinary(result);
+                    System.out.println(result);
+                    field.setText(String.valueOf(result));
 
-            }
-        }
+                } else {
 
-        else if(operatorClicked.equals("x")){
-            Integer result = operation.multiplication(entry1, entry2);
-            result = converter.convertToBinary(result);
-            System.out.println(result);
-            field.setText(String.valueOf(result));
-        }
+                    field.setText("ERROR: Negative Number");
 
-        else if(operatorClicked.equals("/")){
-
-            if(entry2 != 0) {
-
-                Integer result = operation.division(entry1, entry2);
+                }
+            } else if (operatorClicked.equals("x")) {
+                Integer result = operation.multiplication(entry1, entry2);
                 result = converter.convertToBinary(result);
                 System.out.println(result);
                 field.setText(String.valueOf(result));
+            } else if (operatorClicked.equals("/")) {
 
-            } else {
+                if (entry2 != 0) {
 
-                field.setText("ERROR: Divide by Zero");
+                    Integer result = operation.division(entry1, entry2);
+                    result = converter.convertToBinary(result);
+                    System.out.println(result);
+                    field.setText(String.valueOf(result));
 
+                } else {
+
+                    field.setText("ERROR: Divide by Zero");
+
+                }
             }
         }
 
+        operatorClicked = "";
     }
 
     public void clearField(){
