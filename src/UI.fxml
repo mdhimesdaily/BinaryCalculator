@@ -34,12 +34,12 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="188.0" layoutY="229.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="X">
+            <Button layoutX="188.0" layoutY="229.0" mnemonicParsing="false" onAction="#multclick" prefHeight="85.0" prefWidth="80.0" text="X">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="268.0" layoutY="229.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="/">
+            <Button layoutX="268.0" layoutY="229.0" mnemonicParsing="false" onAction="#divclick" prefHeight="85.0" prefWidth="80.0" text="/">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
@@ -49,12 +49,12 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="188.0" layoutY="314.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="sq">
+            <Button layoutX="188.0" layoutY="314.0" mnemonicParsing="false" onAction="#sqclick" prefHeight="85.0" prefWidth="80.0" text="sq">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Button>
-            <Button layoutX="268.0" layoutY="314.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="sqrt">
+            <Button layoutX="268.0" layoutY="314.0" mnemonicParsing="false" onAction="#sqrtclick" prefHeight="85.0" prefWidth="80.0" text="sqrt">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

@@ -1,4 +1,3 @@
-import com.sun.javafx.scene.layout.region.Margins;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -8,7 +7,6 @@ public class Controller {
 
         private Object operatorClicked;
         private String entry1;
-        @FXML private Label label;
         @FXML private TextField field;
 
     void setMain(Main main){
@@ -16,24 +14,24 @@ public class Controller {
 
         public void zeroclick(){
             entry1= field.getText();
-            //if(entry1.length() < 5) {
+            if(entry1.length() < 5) {
                 field.setText(entry1 + '0');
-            //}
+            }
         }
 
     public void oneclick() {
         entry1 = field.getText();
-        //if (entry1.length() < 5) {
+        if (entry1.length() < 5) {
             field.setText(entry1 + '1');
-        //}
+        }
     }
 
     public Integer plusclick(){
         Convert converter = new Convert();
         entry1= String.valueOf(converter.ConverttoDecimal(field.getText()));
+        System.out.println(entry1);
         operatorClicked = "+";
         field.clear();
-
         return Integer.parseInt(entry1);
     }
 
