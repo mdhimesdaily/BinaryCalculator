@@ -1,6 +1,6 @@
 public class Operator {
 
-    //This class handles all mathmatical operations that occur
+    //This class handles all mathematical operations that occur
 
     Integer Addition(int first_number, int second_number) {
 

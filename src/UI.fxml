@@ -5,47 +5,61 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI">
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #d9faff;">
          <children>
-            <TextField alignment="CENTER_RIGHT" layoutX="28.0" layoutY="51.0" prefHeight="51.0" prefWidth="343.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+            <TextField fx:id="field" alignment="CENTER_RIGHT" editable="false" layoutX="28.0" layoutY="51.0" prefHeight="60.0" prefWidth="343.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                <font>
-                  <Font size="22.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </TextField>
-            <Button layoutX="54.0" layoutY="175.0" mnemonicParsing="false" text="0">
+            <Button layoutX="54.0" layoutY="175.0" mnemonicParsing="false" onAction="#zeroclick" text="0">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="54.0" layoutY="305.0" mnemonicParsing="false" text="1">
+            <Button layoutX="54.0" layoutY="305.0" mnemonicParsing="false" onAction="#oneclick" text="1">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="184.0" layoutY="168.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="+">
+            <Button layoutX="188.0" layoutY="144.0" mnemonicParsing="false" onAction="#plusclick" prefHeight="85.0" prefWidth="80.0" text="+">
                <font>
                   <Font name="System Bold Italic" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="272.0" layoutY="168.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="-">
+            <Button layoutX="268.0" layoutY="144.0" mnemonicParsing="false" onAction="#minusclick" prefHeight="85.0" prefWidth="80.0" text="-">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="184.0" layoutY="265.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="X">
+            <Button layoutX="188.0" layoutY="229.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="X">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="272.0" layoutY="265.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="/">
+            <Button layoutX="268.0" layoutY="229.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="/">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <Button layoutX="184.0" layoutY="361.0" mnemonicParsing="false" prefWidth="168.0" text="=">
+            <Button layoutX="184.0" layoutY="399.0" mnemonicParsing="false" onAction="#equalsclick" prefWidth="168.0" text="=">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button layoutX="188.0" layoutY="314.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="sq">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Button>
+            <Button layoutX="268.0" layoutY="314.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="80.0" text="sqrt">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="24.0" layoutY="399.0" mnemonicParsing="false" onAction="#clearField" prefHeight="77.0" prefWidth="127.0" text="C">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
