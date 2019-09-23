@@ -14,6 +14,11 @@ public class Controller {
 
     public void zeroclick(){
         String temp = field.getText();
+
+        if(temp.equals("ERROR: Divide by Zero") || temp.equals("ERROR: Negative Number")) {
+            field.clear();
+        }
+
         if(temp.length() < 5) {
             field.setText(temp + '0');
         }
@@ -21,6 +26,11 @@ public class Controller {
 
     public void oneclick() {
         String temp = field.getText();
+
+        if(temp.equals("ERROR: Divide by Zero") || temp.equals("ERROR: Negative Number")) {
+            field.clear();
+        }
+
         if(temp.length() < 5) {
             field.setText(temp + '1');
         }
@@ -88,10 +98,19 @@ public class Controller {
         }
 
         else if(operatorClicked.equals("-")){
-            Integer result = operation.subtraction(entry1, entry2);
-            result = converter.convertToBinary(result);
-            System.out.println(result);
-            field.setText(String.valueOf(result));
+
+            if(entry1 > entry2) {
+
+                Integer result = operation.subtraction(entry1, entry2);
+                result = converter.convertToBinary(result);
+                System.out.println(result);
+                field.setText(String.valueOf(result));
+
+            } else {
+
+                field.setText("ERROR: Negative Number");
+
+            }
         }
 
         else if(operatorClicked.equals("x")){
@@ -102,10 +121,19 @@ public class Controller {
         }
 
         else if(operatorClicked.equals("/")){
-            Integer result = operation.division(entry1, entry2);
-            result = converter.convertToBinary(result);
-            System.out.println(result);
-            field.setText(String.valueOf(result));
+
+            if(entry2 != 0) {
+
+                Integer result = operation.division(entry1, entry2);
+                result = converter.convertToBinary(result);
+                System.out.println(result);
+                field.setText(String.valueOf(result));
+
+            } else {
+
+                field.setText("ERROR: Divide by Zero");
+
+            }
         }
 
     }
