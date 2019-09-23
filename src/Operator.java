@@ -26,4 +26,13 @@ public class Operator {
         return first_number * second_number;
     }
 
+    double SquareRoot(int first_number){
+        return java.lang.Math.sqrt(first_number);
+    }
+
+    double Square(int first_number){
+        return first_number * first_number;
+    }
+
+
 }
