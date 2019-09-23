@@ -15,11 +15,8 @@ class Operator {
     int division(int first_number, int second_number) {
 
         if(first_number < second_number) {
+
             return 0;
-
-        } else if(second_number == 0) {
-            return 255;
-
         }
 
         return StrictMath.round(first_number / second_number);
@@ -31,10 +28,12 @@ class Operator {
     }
 
     int squareRoot(int first_number){
+
         return (int)StrictMath.round(Math.sqrt(first_number));
     }
 
     int square(int first_number){
+
         return first_number * first_number;
     }
 
