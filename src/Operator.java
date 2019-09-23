@@ -16,6 +16,10 @@ public class Operator {
 
         if(first_number < second_number) {
             return 0;
+
+        } else if(second_number == 0) {
+            return 255;
+
         }
 
         return first_number / second_number;
@@ -26,11 +30,11 @@ public class Operator {
         return first_number * second_number;
     }
 
-    double squareRoot(int first_number){
-        return Math.sqrt(first_number);
+    int squareRoot(int first_number){
+        return (int)StrictMath.round(Math.sqrt(first_number));
     }
 
-    double square(int first_number){
+    int square(int first_number){
         return first_number * first_number;
     }
 
