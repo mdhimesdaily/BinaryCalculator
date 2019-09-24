@@ -48,7 +48,11 @@ public class Controller {
 
     public void plusclick() {
 
-        if(!field.getText().isEmpty()) {
+        if(field.getText().equals("ERROR: Divide by Zero") || field.getText().equals("ERROR: Negative Number")) {
+
+            field.clear();
+
+        } else if(!field.getText().isEmpty()) {
 
             entry1 = converter.convertToDecimal(field.getText());
             operatorClicked = "+";
@@ -60,7 +64,11 @@ public class Controller {
 
     public void minusclick() {
 
-        if(!field.getText().isEmpty()) {
+        if(field.getText().equals("ERROR: Divide by Zero") || field.getText().equals("ERROR: Negative Number")) {
+
+            field.clear();
+
+        } else if(!field.getText().isEmpty()) {
 
             entry1 = converter.convertToDecimal(field.getText());
             operatorClicked = "-";
@@ -72,7 +80,11 @@ public class Controller {
 
     public void multclick() {
 
-        if(!field.getText().isEmpty()) {
+        if(field.getText().equals("ERROR: Divide by Zero") || field.getText().equals("ERROR: Negative Number")) {
+
+            field.clear();
+
+        } else if(!field.getText().isEmpty()) {
 
             entry1 = converter.convertToDecimal(field.getText());
             operatorClicked = "x";
@@ -84,7 +96,11 @@ public class Controller {
 
     public void divclick() {
 
-        if(!field.getText().isEmpty()) {
+        if(field.getText().equals("ERROR: Divide by Zero") || field.getText().equals("ERROR: Negative Number")) {
+
+            field.clear();
+
+        } else if(!field.getText().isEmpty()) {
 
             entry1 = converter.convertToDecimal(field.getText());
             operatorClicked = "/";
@@ -96,7 +112,11 @@ public class Controller {
 
     public void sqclick() {
 
-        if(!field.getText().isEmpty()) {
+        if(field.getText().equals("ERROR: Divide by Zero") || field.getText().equals("ERROR: Negative Number")) {
+
+            field.clear();
+
+        } else if(!field.getText().isEmpty()) {
 
             Integer result = 0;
 
@@ -111,7 +131,11 @@ public class Controller {
 
     public void sqrtclick() {
 
-        if(!field.getText().isEmpty()) {
+        if(field.getText().equals("ERROR: Divide by Zero") || field.getText().equals("ERROR: Negative Number")) {
+
+            field.clear();
+
+        } else if(!field.getText().isEmpty()) {
 
             Integer result = 0;
 
