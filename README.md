@@ -19,7 +19,7 @@ Evan Witous:
 ## Screenshot of project:
 ![A screenshot of our software](https://github.com/mdhimesdaily/BinaryCalculator/blob/Development/Capture.PNG)
 
-## Maunal
+## Manual
 
 The application is quiet simple, it is a basic calculator that works with binary numbers:
 * If you press the button 1 or 0 it will add that number to the textbox like an ordinary calculator as long as there aren't more than 5 digits in the textbox.
