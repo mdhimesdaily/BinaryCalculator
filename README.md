@@ -21,7 +21,7 @@ Evan Witous:
 
 ## Manual
 
-The application is quiet simple, it is a basic calculator that works with binary numbers:
+The application is quite simple, it is a basic calculator that works with binary numbers:
 * If you press the button 1 or 0 it will add that number to the textbox like an ordinary calculator as long as there aren't more than 5 digits in the textbox.
 * When you press one of the mathmatical operator buttons it will store the value of the number you have already entered assuming that you have entered it. If you have not entered a number into the text box, then nothing will occur.
 * Once you have selected your mathmatical operator you can then enter a second number assuming you have selected a dual variable operator.
